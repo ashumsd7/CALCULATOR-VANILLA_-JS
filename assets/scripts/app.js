@@ -77,3 +77,12 @@ divideBtn.addEventListener("click", devide);
 
 // let errorMesage= 'an error\n' +
 //                     'coocured';
+
+
+document.getElementById('reset-btn').addEventListener('click',reset)
+
+function reset() {
+  usrInput.value="";
+  currentResultOutput.innerText="Result";
+  currentCalculationOutput.innerText="Description"
+}
