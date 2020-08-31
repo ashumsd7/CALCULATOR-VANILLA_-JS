@@ -4,11 +4,16 @@ let logEntries = []; //logs array
 
 //getting input from user input
 function getUserNumberInput() {
-  return parseInt(usrInput.value);
+  let val= parseInt(usrInput.value)
+  return val;
 }
 
 //generates and write calculation log and result
 function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
+  if(usrInput.value==""){
+    currentResult=0;
+    calcNumber=0;
+  }
   const calcDescription = `${resultBeforeCalc} ${operator} ${calcNumber}`;
   outputResult(currentResult, calcDescription); // from vendor.js
 }
